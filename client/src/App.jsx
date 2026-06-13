@@ -6,7 +6,7 @@ import About from "./Components/About";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import Process from "./Components/Process";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
       <Services />
       <Process />
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

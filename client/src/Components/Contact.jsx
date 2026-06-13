@@ -9,37 +9,71 @@ import {
 
 const Contact = () => {
 
+
   return (
 
     <section
       id="contact"
-      className="py-24 bg-white"
+      className="py-20 md:py-28 bg-slate-50"
     >
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
 
         {/* Heading */}
 
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-12 md:mb-16">
 
-          <span className="text-sm font-medium text-slate-600">
+
+          <p
+            className="
+            text-xs
+            sm:text-sm
+            uppercase
+            tracking-[3px]
+            font-bold
+            text-indigo-600
+            "
+          >
             Contact Us
-          </span>
+          </p>
 
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-slate-900">
 
-            Let's Build Better Learning Systems Together
+          <h2
+            className="
+            mt-4
+            text-3xl
+            sm:text-4xl
+            md:text-5xl
+            font-bold
+            text-slate-900
+            leading-tight
+            "
+          >
+
+            Let's build better
+
+            <span className="text-indigo-600">
+              {" "}learning systems.
+            </span>
 
           </h2>
 
 
-          <p className="mt-5 text-lg text-gray-600">
 
-            Tell us about your training goals, employee challenges,
-            or internal knowledge systems. Our team will help you
-            design a solution that fits your organization.
+          <p
+            className="
+            mt-5
+            text-base
+            md:text-lg
+            text-slate-600
+            leading-relaxed
+            "
+          >
+
+            Tell us about your training goals, internal knowledge,
+            or employee challenges. We will help design the right solution.
 
           </p>
 
@@ -50,117 +84,138 @@ const Contact = () => {
 
 
 
-        <div className="grid md:grid-cols-2 gap-12">
+
+        <div
+          className="
+          grid
+          lg:grid-cols-2
+          gap-10
+          md:gap-16
+          items-start
+          " 
+        >
 
 
 
-          {/* Contact Info */}
-
-          <div className="bg-slate-900 rounded-3xl p-10 text-white">
 
 
-            <h3 className="text-3xl font-semibold">
+
+
+          {/* LEFT INFO */}
+
+
+          <div
+            className="
+            bg-slate-950
+            p-7
+            sm:p-10
+            md:p-12
+            text-white
+            "
+          >
+
+
+            <h3
+              className="
+              text-2xl
+              md:text-3xl
+              font-bold
+              "
+            >
 
               Start A Conversation
 
             </h3>
 
 
-            <p className="mt-4 text-gray-300">
 
-              Whether you need onboarding, compliance training,
-              or a complete learning strategy, we can help.
+            <p
+              className="
+              mt-4
+              text-sm
+              md:text-base
+              text-slate-400
+              leading-relaxed
+              "
+            >
+
+              From onboarding systems to complete learning
+              architectures, our team helps organizations scale knowledge.
 
             </p>
 
 
 
 
-            <div className="mt-10 space-y-6">
 
 
-
-              <div className="flex gap-4 items-center">
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center">
-
-                  <Mail size={22}/>
-
-                </div>
-
-
-                <div>
-
-                  <p className="text-sm text-gray-400">
-                    Email
-                  </p>
-
-                  <p>
-                    hello@lumenfold.com
-                  </p>
-
-                </div>
-
-
-              </div>
+            <div
+              className="
+              mt-10
+              md:mt-12
+              space-y-7
+              "
+            >
 
 
 
 
+              {[
+                {
+                  icon: Mail,
+                  title:"Email",
+                  value:"hello@lumenfold.com"
+                },
+                {
+                  icon: Phone,
+                  title:"Phone",
+                  value:"+1 (000) 000-0000"
+                },
+                {
+                  icon: MapPin,
+                  title:"Location",
+                  value:"Serving Businesses Worldwide"
+                }
 
-              <div className="flex gap-4 items-center">
-
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center">
-
-                  <Phone size={22}/>
-
-                </div>
-
-
-                <div>
-
-                  <p className="text-sm text-gray-400">
-                    Phone
-                  </p>
-
-                  <p>
-                    +1 (000) 000-0000
-                  </p>
-
-                </div>
+              ].map((item,index)=>{
 
 
-              </div>
+                const Icon=item.icon;
 
 
+                return (
+
+                  <div
+                    key={index}
+                    className="flex gap-4 items-start"
+                  >
+
+                    <Icon
+                      size={22}
+                      className="text-indigo-400 mt-1 shrink-0"
+                    />
 
 
+                    <div>
 
-              <div className="flex gap-4 items-center">
-
-
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center">
-
-                  <MapPin size={22}/>
-
-                </div>
+                      <p className="text-sm text-slate-400">
+                        {item.title}
+                      </p>
 
 
-                <div>
+                      <p className="mt-1 text-sm sm:text-base font-medium">
+                        {item.value}
+                      </p>
 
-                  <p className="text-sm text-gray-400">
-                    Location
-                  </p>
-
-                  <p>
-                    Serving Businesses Worldwide
-                  </p>
-
-                </div>
+                    </div>
 
 
-              </div>
+                  </div>
+
+                )
+
+
+              })}
 
 
 
@@ -174,87 +229,140 @@ const Contact = () => {
 
 
 
-          {/* Form */}
 
-          <form className="border border-gray-200 rounded-3xl p-8 space-y-5">
+
+
+          {/* FORM */}
+
+
+          <form
+            className="
+            space-y-6
+            "
+          >
+
+
+
+
+            {[
+              {
+                label:"Full Name",
+                placeholder:"Your name",
+                type:"text"
+              },
+              {
+                label:"Work Email",
+                placeholder:"company@email.com",
+                type:"email"
+              },
+              {
+                label:"Company",
+                placeholder:"Company name",
+                type:"text"
+              }
+
+            ].map((field,index)=>(
+
+
+              <div key={index}>
+
+
+                <label className="text-sm text-slate-600">
+
+                  {field.label}
+
+                </label>
+
+
+                <input
+
+                  type={field.type}
+
+                  placeholder={field.placeholder}
+
+                  className="
+                  mt-3
+                  w-full
+                  bg-transparent
+                  border-b
+                  border-slate-300
+                  py-3
+                  sm:py-4
+                  text-sm
+                  sm:text-base
+                  outline-none
+                  focus:border-indigo-600
+                  "
+
+                />
+
+
+              </div>
+
+
+            ))}
+
+
+
+
 
 
             <div>
 
-              <label className="text-sm text-gray-600">
-                Full Name
-              </label>
 
-              <input
-                type="text"
-                placeholder="Your name"
-                className="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-slate-500"
-              />
-
-            </div>
-
-
-
-
-            <div>
-
-              <label className="text-sm text-gray-600">
-                Work Email
-              </label>
-
-              <input
-                type="email"
-                placeholder="company@email.com"
-                className="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-slate-500"
-              />
-
-            </div>
-
-
-
-
-            <div>
-
-              <label className="text-sm text-gray-600">
-                Company
-              </label>
-
-              <input
-                type="text"
-                placeholder="Company name"
-                className="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-slate-500"
-              />
-
-            </div>
-
-
-
-
-
-            <div>
-
-              <label className="text-sm text-gray-600">
+              <label className="text-sm text-slate-600">
                 Message
               </label>
+
 
               <textarea
 
                 rows="4"
 
-                placeholder="Tell us about your training needs..."
+                placeholder="Tell us about your learning requirements"
 
-                className="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-slate-500"
+                className="
+                mt-3
+                w-full
+                bg-transparent
+                border-b
+                border-slate-300
+                py-3
+                sm:py-4
+                text-sm
+                sm:text-base
+                outline-none
+                focus:border-indigo-600
+                "
 
               />
 
+
             </div>
+
+
+
 
 
 
 
             <button
 
-              className="w-full flex justify-center items-center gap-2 bg-slate-800 text-white py-4 rounded-xl hover:bg-slate-700 transition"
+              className="
+              w-full
+              sm:w-auto
+              flex
+              items-center
+              justify-center
+              gap-3
+              bg-slate-900
+              text-white
+              px-8
+              py-4
+              font-semibold
+              hover:bg-indigo-600
+              transition
+              "
 
             >
 
@@ -267,11 +375,16 @@ const Contact = () => {
 
 
 
+
+
           </form>
 
 
 
+
+
         </div>
+
 
 
 

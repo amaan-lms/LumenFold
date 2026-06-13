@@ -1,81 +1,93 @@
 import React from "react";
-import {
-  LinkedIn,
-  Mail,
-  ArrowRight
-} from "lucide-react";
+import { Link, Mail, ArrowRight } from "lucide-react";
+import logo from "../assets/logobg.png";
 
 
 const Footer = () => {
 
   return (
 
-    <footer className="bg-slate-900 text-white">
-
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="bg-slate-950 text-white">
 
 
-        <div className="grid md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-20">
+
+
+
+        {/* Top Section */}
+
+        <div className="grid lg:grid-cols-4 gap-14 pb-16 border-b border-white/10">
+
+
 
 
 
           {/* Brand */}
 
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
 
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
+              <img
+                src={logo}
+                alt="LumenFold logo"
+                className="h-30 w-auto object-contain"
+              />
 
-
-              <div className="w-11 h-11 rounded-full bg-white text-slate-900 flex items-center justify-center font-bold text-xl">
-
-                L
-
-              </div>
-
-
-              <div>
-
-                <h2 className="text-2xl font-semibold">
-
+              {/* <div>
+                <h2 className="text-2xl font-bold">
                   LumenFold
-
                 </h2>
 
-
-                <p className="text-sm text-gray-400">
-
+                <p className="text-sm text-slate-400">
                   Learning Systems
-
                 </p>
-
-              </div>
-
-
+              </div> */}
             </div>
 
 
 
 
-            <p className="mt-6 text-gray-300 max-w-md leading-relaxed">
 
-              We help companies transform internal knowledge,
-              SOPs, policies, and processes into clear learning
-              systems that improve employee performance and
-              operational consistency.
+            <p className="
+              mt-7
+              text-slate-400
+              max-w-lg
+              leading-relaxed
+            ">
+
+              We transform company knowledge, SOPs,
+              and internal expertise into scalable digital
+              learning systems built for modern teams.
 
             </p>
 
 
 
 
-            <button className="mt-6 flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-xl hover:bg-gray-100 transition">
+            <button
+              className="
+              mt-8
+              flex
+              items-center
+              gap-3
+              bg-white
+              text-slate-900
+              px-7
+              py-4
+              font-semibold
+              hover:bg-indigo-600
+              hover:text-white
+              transition
+              "
+            >
 
               Build Your Learning System
 
-              <ArrowRight size={17}/>
+              <ArrowRight size={18}/>
 
             </button>
+
 
 
           </div>
@@ -85,44 +97,66 @@ const Footer = () => {
 
 
 
-          {/* Navigation */}
+
+
+          {/* Company Links */}
 
           <div>
 
 
-            <h3 className="font-semibold text-lg mb-5">
+            <h3 className="
+              text-sm
+              uppercase
+              tracking-[3px]
+              font-bold
+              text-slate-300
+              mb-6
+            ">
 
               Company
 
             </h3>
 
 
-            <ul className="space-y-3 text-gray-300">
+
+            <ul className="space-y-4 text-slate-400">
 
 
               <li>
-                <a href="#about">
+                <a 
+                  href="#about"
+                  className="hover:text-white transition"
+                >
                   About
                 </a>
               </li>
 
 
               <li>
-                <a href="#services">
+                <a 
+                  href="#services"
+                  className="hover:text-white transition"
+                >
                   Services
                 </a>
               </li>
 
 
               <li>
-                <a href="#process">
+                <a 
+                  href="#process"
+                  className="hover:text-white transition"
+                >
                   Process
                 </a>
               </li>
 
 
               <li>
-                <a href="#contact">
+                <a 
+                  href="#contact"
+                  className="hover:text-white transition"
+                >
                   Contact
                 </a>
               </li>
@@ -138,19 +172,31 @@ const Footer = () => {
 
 
 
+
+
+
+
           {/* Services */}
 
           <div>
 
 
-            <h3 className="font-semibold text-lg mb-5">
+            <h3 className="
+              text-sm
+              uppercase
+              tracking-[3px]
+              font-bold
+              text-slate-300
+              mb-6
+            ">
 
               Services
 
             </h3>
 
 
-            <ul className="space-y-3 text-gray-300">
+
+            <ul className="space-y-4 text-slate-400">
 
 
               <li>
@@ -164,7 +210,7 @@ const Footer = () => {
 
 
               <li>
-                Compliance Training
+                Employee Training
               </li>
 
 
@@ -188,12 +234,26 @@ const Footer = () => {
 
 
 
+
+
         {/* Bottom */}
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="
+          pt-8
+          flex
+          flex-col
+          md:flex-row
+          justify-between
+          items-center
+          gap-6
+        ">
 
 
-          <p className="text-gray-400 text-sm">
+
+          <p className="
+            text-sm
+            text-slate-500
+          ">
 
             © {new Date().getFullYear()} LumenFold. All rights reserved.
 
@@ -203,22 +263,30 @@ const Footer = () => {
 
 
 
-          <div className="flex items-center gap-5">
+          <div className="flex gap-6">
 
 
             <a
               href="#"
-              className="text-gray-300 hover:text-white transition"
+              className="
+              text-slate-400
+              hover:text-white
+              transition
+              "
             >
 
-              <LinkedIn size={20}/>
+              <Link size={20}/>
 
             </a>
 
 
             <a
               href="mailto:hello@lumenfold.com"
-              className="text-gray-300 hover:text-white transition"
+              className="
+              text-slate-400
+              hover:text-white
+              transition
+              "
             >
 
               <Mail size={20}/>
@@ -231,6 +299,7 @@ const Footer = () => {
 
 
         </div>
+
 
 
 

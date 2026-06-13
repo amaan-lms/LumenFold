@@ -21,73 +21,64 @@ const Services = () => {
       icon: BookOpen,
       title: "Corporate Instructional Design",
       description:
-        "Design structured learning experiences that transform internal business knowledge into effective employee training programs."
+        "Transform business knowledge into structured employee learning systems."
     },
-
 
     {
       icon: MonitorPlay,
-      title: "Online Course Development",
+      title: "Digital Course Development",
       description:
-        "Create engaging digital courses with clear learning paths, content structure, assessments, and professional design."
+        "Create professional online courses with clear learning journeys."
     },
-
 
     {
       icon: Users,
-      title: "Employee Onboarding Systems",
+      title: "Employee Onboarding",
       description:
-        "Build onboarding frameworks that help new employees understand processes, roles, and company culture faster."
+        "Build onboarding systems that accelerate employee productivity."
     },
-
 
     {
       icon: ShieldCheck,
-      title: "Compliance & Policy Training",
+      title: "Compliance Training",
       description:
-        "Convert compliance requirements and company policies into clear training systems employees can easily follow."
+        "Convert policies and requirements into simple training experiences."
     },
-
 
     {
       icon: FileText,
-      title: "SOP To Course Conversion",
+      title: "SOP Conversion",
       description:
-        "Transform complex SOP documents and operational processes into organized learning experiences."
+        "Turn complex documents into scalable learning content."
     },
-
 
     {
       icon: Layers,
-      title: "LMS & Course Structure Consulting",
+      title: "LMS Architecture",
       description:
-        "Plan LMS architecture, course organization, learning journeys, and scalable training systems."
+        "Design organized learning platforms built for growth."
     },
-
 
     {
       icon: Search,
-      title: "Training Audits & Improvement Plans",
+      title: "Training Analysis",
       description:
-        "Analyze existing training programs and identify opportunities to improve effectiveness and engagement."
+        "Identify gaps and improve existing learning programs."
     },
-
 
     {
       icon: TrendingUp,
-      title: "Leadership & Professional Development",
+      title: "Leadership Development",
       description:
-        "Develop learning programs that support leadership growth, communication, and professional skills."
+        "Create programs that develop stronger teams and leaders."
     },
-
 
     {
       icon: Settings,
       title: "Custom Learning Systems",
       description:
-        "Create customized learning solutions designed around your company's goals, teams, and operational needs."
-    },
-
+        "Build solutions aligned with your business operations."
+    }
 
   ];
 
@@ -97,7 +88,7 @@ const Services = () => {
 
     <section
       id="services"
-      className="py-24 bg-slate-50"
+      className="py-24 bg-slate-100"
     >
 
       <div className="max-w-7xl mx-auto px-6">
@@ -105,82 +96,147 @@ const Services = () => {
 
         {/* Heading */}
 
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-16">
 
-          <span className="text-sm text-slate-600 font-medium">
+
+          <p className="
+          text-sm
+          uppercase
+          tracking-[3px]
+          font-bold
+          text-indigo-600
+          ">
             Our Services
-          </span>
+          </p>
 
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold text-slate-900">
 
-            Building Learning Systems That Help Businesses Grow
+          <h2 className="
+          mt-5
+          text-4xl
+          md:text-5xl
+          font-bold
+          text-slate-900
+          leading-tight
+          ">
+
+            Learning systems designed for modern organizations.
 
           </h2>
 
 
-          <p className="mt-5 text-lg text-gray-600">
 
-            From onboarding to compliance, LumenFold helps organizations
-            organize knowledge and create professional employee learning
-            experiences.
+          <p className="
+          mt-5
+          text-lg
+          text-slate-600
+          leading-relaxed
+          ">
+
+            We help companies organize knowledge, improve onboarding,
+            and build scalable employee training experiences.
 
           </p>
+
 
         </div>
 
 
 
 
-        {/* Service Cards */}
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Services */}
 
-
-          {services.map((service, index) => {
-
-            const Icon = service.icon;
-
-
-            return (
-
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-7 hover:shadow-lg transition"
-              >
+        <div className="
+        grid
+        md:grid-cols-3
+        gap-x-10
+        gap-y-12
+        ">
 
 
-                <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center mb-6">
+          {
+            services.map((service,index)=>{
 
-                  <Icon
-                    size={26}
-                    className="text-slate-700"
-                  />
+
+              const Icon = service.icon;
+
+
+              return (
+
+                <div
+                  key={index}
+                  className="
+                  group
+                  border-t
+                  border-slate-200
+                  pt-8
+                  hover:border-indigo-600
+                  transition
+                  "
+                >
+
+
+                  <div className="
+                  flex
+                  items-center
+                  justify-between
+                  mb-6
+                  ">
+
+
+                    <Icon
+                      size={28}
+                      className="
+                      text-indigo-600
+                      "
+                    />
+
+
+                    <span className="
+                    text-xs
+                    text-slate-400
+                    font-bold
+                    ">
+                      0{index+1}
+                    </span>
+
+
+                  </div>
+
+
+
+                  <h3 className="
+                  text-xl
+                  font-bold
+                  text-slate-900
+                  ">
+
+                    {service.title}
+
+                  </h3>
+
+
+
+                  <p className="
+                  mt-3
+                  text-slate-600
+                  leading-relaxed
+                  text-sm
+                  ">
+
+                    {service.description}
+
+                  </p>
+
 
                 </div>
 
+              )
 
 
-                <h3 className="text-xl font-semibold text-slate-900">
-
-                  {service.title}
-
-                </h3>
-
-
-
-                <p className="mt-3 text-gray-600 leading-relaxed">
-
-                  {service.description}
-
-                </p>
-
-
-              </div>
-
-            );
-
-          })}
+            })
+          }
 
 
         </div>
@@ -188,35 +244,73 @@ const Services = () => {
 
 
 
-        {/* Bottom CTA */}
-
-        <div className="mt-16 bg-slate-900 rounded-3xl p-10 text-center">
 
 
-          <h3 className="text-3xl font-semibold text-white">
+        {/* CTA */}
 
-            Need a complete learning system for your organization?
+        <div className="
+        mt-20
+        bg-slate-950
+        p-12
+        flex
+        flex-col
+        md:flex-row
+        justify-between
+        items-center
+        gap-8
+        ">
 
-          </h3>
+
+          <div>
 
 
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+            <h3 className="
+            text-3xl
+            font-bold
+            text-white
+            ">
 
-            Partner with an instructional design team that helps you
-            convert knowledge into scalable training solutions.
+              Build your learning infrastructure.
 
-          </p>
+            </h3>
 
 
-          <button className="mt-7 px-8 py-3 bg-white text-slate-900 rounded-xl font-medium hover:bg-gray-100 transition">
+            <p className="
+            mt-3
+            text-slate-400
+            max-w-xl
+            ">
+
+              Partner with a team that transforms knowledge into
+              scalable digital learning systems.
+
+            </p>
+
+
+          </div>
+
+
+
+          <button
+            className="
+            bg-white
+            text-slate-900
+            px-8
+            py-4
+            font-semibold
+            hover:bg-indigo-600
+            hover:text-white
+            transition
+            "
+          >
 
             Start A Conversation
 
           </button>
 
 
-        </div>
 
+        </div>
 
 
       </div>
